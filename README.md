@@ -1,6 +1,50 @@
 ## Escuela Colombiana de Ingeniería
 
 ## Arquitecturas de Software
+# Blueprints Middleware
+
+Este proyecto implementa un sistema de manejo de **planos (blueprints)** en Java, usando **Spring** y pruebas con **JUnit 5**.  
+El sistema permite almacenar, consultar y aplicar filtros a los planos registrados.
+
+---
+
+## 📂 Estructura del Proyecto
+El proyecto está organizado en los siguientes paquetes:
+- `edu.eci.arsw.blueprints`: Paquete raíz que contiene la clase principal `App`.
+- `edu.eci.arsw.blueprints.model`: Contiene las clases del modelo de datos, como `Point` y `Blueprint`.
+- `edu.eci.arsw.blueprints.persistence`: Contiene las interfaces y clases relacionadas con la persistencia de datos, como `BlueprintsPersistence` e `InMemoryBlueprintPersistence`.
+- `edu.eci.arsw.blueprints.services`: Contiene las interfaces y clases de servicios, como `BlueprintServices` y su implementación `BlueprintServicesImpl`.
+- `edu.eci.arsw.blueprints.filters`: Contiene las interfaces y clases de filtros, como `BlueprintFilter`, `RedundancyFilter` y `SubsamplingFilter`.
+- `edu.eci.arsw.blueprints.test`: Contiene las clases de prueba para las diferentes funcionalidades del sistema.
+- `resources`: Contiene archivos de configuración y otros recursos necesarios para la aplicación.
+- `img`: Contiene imágenes utilizadas en la documentación.
+- `pom.xml`: Archivo de configuración de Maven que gestiona las dependencias del proyecto.
+- `README.md`: Este archivo de documentación del proyecto.
+---
+
+---
+
+## ⚙️ Instalación y compilación
+
+1. Clona este repositorio o copia los archivos fuente.
+2. Compila el proyecto con Maven:
+
+```bash
+mvn clean install
+```
+3. Ejecuta las pruebas unitarias con Maven:
+
+```bash
+mvn test
+```
+4. Ejecuta la aplicación principal:
+
+```bash
+mvn exec:java -Dexec.mainClass="edu.eci.arsw.blueprints.App"
+```
+
+
+
 
 # Componentes y conectores - Parte I.
 
@@ -34,3 +78,5 @@ En este ejercicio se va a construír un modelo de clases para la capa lógica de
 	* (B) Filtrado de submuestreo: suprime 1 de cada 2 puntos del plano, de manera intercalada.
 
 5. Agrege las pruebas correspondientes a cada uno de estos filtros, y pruebe su funcionamiento en el programa de prueba, comprobando que sólo cambiando la posición de las anotaciones -sin cambiar nada más-, el programa retorne los planos filtrados de la manera (A) o de la manera (B). 
+
+Autor: David Santiago Espinosa
